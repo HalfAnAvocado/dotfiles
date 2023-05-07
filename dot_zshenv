@@ -1,0 +1,7 @@
+# Usually run for every zsh
+# Put as little as possible in this file, as every single zsh which starts up has to read it
+# Used for setting user's environment variables; it should not contain commands that produce output or assume the shell is attached to a TTY. When this file exists it will always be read.
+
+typeset -U path PATH
+path=(~/.local/bin $path)
+export PATH
