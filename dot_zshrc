@@ -1,15 +1,15 @@
 # Run for interactive shells
 # Used for setting user's interactive shell configuration and executing commands, will be read when starting as an interactive shell.
 # Use powerline
-USE_POWERLINE="true"
+# USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
 # Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+#  source /usr/share/zsh/manjaro-zsh-prompt
+# fi
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -22,3 +22,6 @@ zstyle :compinstall filename '/home/elsenm/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+NEWLINE=$'\n'
+PROMPT="${NEWLINE}%B%F{magenta}%n%f%b at %B%F{yellow}%m%f%b in %B%F{green}%~%f%b${NEWLINE}%(?.%F{green}>.%F{red}%?>)%f "
